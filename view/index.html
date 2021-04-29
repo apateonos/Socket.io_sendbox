@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Socket.io Chatting</title>
+    <style>
+      #container {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      #monitor {
+        height: 300px;
+        border: 3px solid blue;
+        margin: 5px auto;
+        overflow-y: scroll;
+      }
+
+      .name {
+        font-weight: 800;
+      }
+      .message {
+        margin-left: 5px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='container'>
+      <h1>Chat Client <strong id='myid'></strong></h1>
+      <div>
+        <button name='1' onclick="join(this.name);">1번방</button>
+        <button name='2' onclick="join(this.name);">2번방</button>
+        <button name='3' onclick="join(this.name);">3번방</button>
+        <button id='logout' onclick="disconnect();">나가기</button> 
+      </div>
+      <div id='monitor'></div>
+      <div id='inputWrap'>
+        <input type='text' id='user_name'>
+        <input type='text' id='message'>
+        <button onClick="send();">보내기</button>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://localhost:4000/static/io.js"></script>
+  </body>
+</html>
