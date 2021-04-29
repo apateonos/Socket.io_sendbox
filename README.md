@@ -11,8 +11,7 @@ npm i --save express socket.io
 ```
 
 ## Connection
-
-### Server
+### Server  
 ```javascript
 const express = require('express');
 const app = express();
