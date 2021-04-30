@@ -9,6 +9,10 @@ node app
 ```
 npm i --save express socket.io
 ```
+## 기본적인 Socket.io 구조
+![front_map (7)](https://user-images.githubusercontent.com/67951392/116635808-ab5d2c80-a99a-11eb-8e1d-0fb8c6196ae5.png)
+소켓은 클라이언트가 소켓으로 접근에 성공함과 동시에 하나의 클라이언트 전용 소켓을 부여해준다.
+이 소켓은 클라이언트가 요구한 Request에 따라서 클라이언트가 요청한 Room룸에 이벤트를 전달하고 Room은 받은 요청을 해당 룸이 소유하고있는 모든 클라이언트 목록에 이벤트를 전달한다.
 
 ## Connection
 ### Server  
